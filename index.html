@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flores Amarillas</title>
+  <style>
+    body {
+      background: url("campo-flores.jpg") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333; 
+    }
+
+    .content {
+      background-color: rgba(255,255,255,0.8);
+      padding: 20px;
+      margin: 50px auto;       
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .framed-image {
+      display: block;
+      margin: 0 auto 20px auto; 
+      border: 10px solid #fff;  
+      box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+      border-radius: 8px; 
+      max-width: 100%;    
+      height: auto;       
+    }
+
+    h1 {
+      color: #4e342e;
+      margin-bottom: 10px;
+    }
+    p.dedicatoria {
+      font-size: 1.2em;
+      line-height: 1.4;
+      color: #6d4c41;
+    }
+
+    .flowers-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .flower {
+      position: relative;
+      width: 120px;  
+      height: 120px;
+      animation: flotando 4s ease-in-out infinite;
+    }
+
+    .flower .petal {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #ffeb3b; 
+      border-radius: 50%;
+      top: 35px;     
+      left: 35px;    
+      transform-origin: 50% 50%; 
+    }
+    .flower .petal:nth-child(1)  { transform: rotate(0deg)   translate(35px,0); }
+    .flower .petal:nth-child(2)  { transform: rotate(45deg)  translate(35px,0); }
+    .flower .petal:nth-child(3)  { transform: rotate(90deg)  translate(35px,0); }
+    .flower .petal:nth-child(4)  { transform: rotate(135deg) translate(35px,0); }
+    .flower .petal:nth-child(5)  { transform: rotate(180deg) translate(35px,0); }
+    .flower .petal:nth-child(6)  { transform: rotate(225deg) translate(35px,0); }
+    .flower .petal:nth-child(7)  { transform: rotate(270deg) translate(35px,0); }
+    .flower .petal:nth-child(8)  { transform: rotate(315deg) translate(35px,0); }
+
+    .flower .center {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 40px; 
+      left: 40px; 
+      background-color: #ffc107;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .flower .stem {
+      position: absolute;
+      width: 6px;
+      height: 80px;
+      background-color: #388e3c;
+      left: 57px;  
+      top: 80px;
+      z-index: -1;
+    }
+
+    @keyframes flotando {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="foto.jpeg" alt="Foto especial" class="framed-image" />
+
+    <h1>Para usted, princesa</h1>
+    <p class="dedicatoria">
+        Estas flores amarillas simbolizan la alegría que siento
+        cada vez que pienso en usted.
+    </p>
+
+    <div class="flowers-container">
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+        <div class="stem"></div>
+      </div>
+
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+        <div class="stem"></div>
+      </div>
+
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+        <div class="stem"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
